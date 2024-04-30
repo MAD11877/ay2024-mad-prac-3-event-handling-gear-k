@@ -1,5 +1,6 @@
 package sg.edu.np.mad.madpractical3;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -23,6 +24,15 @@ public class MainActivity extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+        Button btnMessage = findViewById(R.id.btnMessage); // Make sure the ID matches the one in your XML
+        btnMessage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Start MessageGroup Activity
+                Intent intent = new Intent(MainActivity.this, MessageGroup.class);
+                startActivity(intent);
+            }
         });
 
         // Retrieve the random integer from the Intent
