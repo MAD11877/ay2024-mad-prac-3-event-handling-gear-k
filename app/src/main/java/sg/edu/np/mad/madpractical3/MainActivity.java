@@ -38,8 +38,10 @@ public class MainActivity extends AppCompatActivity {
         // Retrieve the random integer from the Intent
         int randomInt = getIntent().getIntExtra("RandomNumber", 0); // Default to 0 if no data found
 
+        // Creating a user instance
         User user = new User("John Doe", "MAD Developer", 1, false);
 
+        // Getting references to the UI components
         TextView tvName = findViewById(R.id.tvName);
         TextView tvDescription = findViewById(R.id.tvDescription);
         Button btnFollow = findViewById(R.id.btnFollow);
