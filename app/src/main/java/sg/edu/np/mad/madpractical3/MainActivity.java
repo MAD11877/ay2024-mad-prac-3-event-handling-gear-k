@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
         TextView tvDescription = findViewById(R.id.tvDescription);
         Button btnFollow = findViewById(R.id.btnFollow);
 
-        // Set the onClick listener for the follow button
         btnFollow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
         // Set the TextViews with the User's name and random integer
         tvName.setText(user.name + " " + randomInt); // Display name and random integer
         tvDescription.setText(user.description);
-        btnFollow.setText("FOLLOW");  // Ensure this is consistent with the text checked in the listener
+        btnFollow.setText("FOLLOW");  // Set the initial button text as "FOLLOW"
+
     }
 }
